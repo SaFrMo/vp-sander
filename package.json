@@ -16,6 +16,9 @@
     },
     "license": "MIT",
     "dependencies": {
+        "auto-blur": "^1.1.1",
+        "case": "^1.5.5",
+        "fh-components": "^1.2.59",
         "node-sass": "^4.9.0",
         "sass-loader": "^7.0.1",
         "vuepress": "^0.8.4"

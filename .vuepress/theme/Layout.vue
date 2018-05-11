@@ -2,16 +2,45 @@
 
     <main>
 
-        <section class="gallery">
-            <planet-earth/>
-        </section>
+        <transition name="fade">
+            <component :is="cmpComponent"/>
+        </transition>
 
     </main>
 
 </template>
 
+<script>
+import { kebab } from 'case'
+import { autoBlur } from 'auto-blur'
+import Vue from 'vue'
+
+// register global components
+Vue.component('a-div', require('fh-components/src/a-div/ADiv.vue'))
+
+// register directives
+import fullHeight from 'fh-components/v-full-height'
+Vue.directive('full-height', fullHeight)
+
+export default {
+    mounted() {
+        autoBlur()
+    },
+    computed: {
+        cmpComponent() {
+            const title =
+                this.$page.frontmatter.component ||
+                this.$page.frontmatter.title ||
+                'default'
+            return kebab(title)
+        }
+    }
+}
+</script>
+
 <style lang="scss">
-@import 'styles/vars';
+@import '.vuepress/styles/vars';
+@import '.vuepress/styles/animations';
 
 body {
     margin: 0;
@@ -26,7 +55,7 @@ body {
 a {
     text-decoration: none;
     color: $color1;
-    transition: color 0.4s;
+    // transition: color 0.4s;
 
     &:hover,
     &:focus {
@@ -42,18 +71,5 @@ a {
 .fade-enter-active,
 .fade-leave-active {
     transition: opacity 0.4s;
-}
-
-// gallery
-.gallery {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-.gallery > * {
-    width: 100%;
-    height: 100%;
 }
 </style>
