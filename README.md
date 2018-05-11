@@ -1,3 +1,3 @@
-# welcome
-
-This is the site.
+---
+title: Home
+---
