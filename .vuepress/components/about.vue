@@ -39,8 +39,9 @@ section.about {
 
 // mobile
 @media (max-width: 750px) {
-    main.about {
+    section.about {
         .entry {
+            -webkit-overflow-scrolling: touch;
             max-width: calc(100% - 80px);
         }
     }
