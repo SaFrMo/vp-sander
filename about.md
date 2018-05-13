@@ -1,5 +1,6 @@
 ---
 title: About
+layout: about
 ---
 
 # Hi! My name is Sander Moolin.

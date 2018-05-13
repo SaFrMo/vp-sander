@@ -4,13 +4,25 @@
         <h1 id="main-menu-title">Sander Moolin</h1>
 
         <ul>
-            <li v-for="(page, i) in $site.pages" v-if="page.title != 'Home'">
+            <li
+                v-for="(page, i) in $site.pages"
+                v-if="isMenuItem(page)">
                 <router-link :to="page.path">{{ page.title }}</router-link>
             </li>
         </ul>
     </nav>
 
 </template>
+
+<script>
+import { isMenuItem } from '../utils'
+
+export default {
+    methods: {
+        isMenuItem
+    }
+}
+</script>
 
 <style lang="scss">
 @import '.vuepress/styles/vars';
