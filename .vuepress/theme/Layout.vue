@@ -29,7 +29,7 @@ export default {
     computed: {
         cmpComponent() {
             const title =
-                this.$page.frontmatter.component ||
+                this.$page.frontmatter.layout ||
                 this.$page.frontmatter.title ||
                 'default'
             return kebab(title)
