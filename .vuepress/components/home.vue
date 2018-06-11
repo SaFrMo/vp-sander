@@ -25,7 +25,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    overflow-x: hidden;
+    overflow: hidden;
 
     .planet-earth {
         width: 100%;
