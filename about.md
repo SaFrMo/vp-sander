@@ -4,7 +4,7 @@ title: About
 
 # Hi! My name is Sander Moolin.
 
-I'm a web developer focused on Vue, WordPress, SVG, and accessibility.
+I'm a web and game developer focused on Vue, WordPress, SVG, and accessibility.
 
 I've worked on:
 
@@ -12,11 +12,11 @@ I've worked on:
 *   [Several sites for Funkhaus](https://gist.github.com/SaFrMo/29a6fbd90047233ec9bf124acba2044b), a web design firm based in LA
 *   [Several NPM packages](https://gist.github.com/SaFrMo/d13f47de90ff0a8bc1d4ee3621a1a7b6), with a focus on zero-dependency libraries
 
-I'm also very interested in game development and decentralized apps/browsing. I've contributed to:
+I'm also very interested in game development and decentralized apps/browsing. I've worked on:
 
 *   [Fritter](https://github.com/beakerbrowser/fritter), a decentralized Twitter clone
 *   [A reusable library](https://github.com/SaFrMo/phaser-component-library) of [Phaser](https://phaser.io) components
-*   [Ludum Dare](https://ldjam.com/users/safrmo/), a regular worldwide game jam
+*   [My game portfolio](https://safrmo.itch.io/) at itch.io
 
 I'm [non-binary](https://transequality.org/issues/resources/understanding-non-binary-people-how-to-be-respectful-and-supportive), so I use they/them pronouns. I also believe very strongly in the [Ethical Design pyramid](https://2017.ind.ie/ethical-design/).
 
