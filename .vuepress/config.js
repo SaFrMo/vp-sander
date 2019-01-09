@@ -1,9 +1,4 @@
 module.exports = {
     title: 'Sander Moolin',
-    description: 'Web and game developer. They/them.',
-    markdown: {
-        anchor: {
-            permalink: false
-        }
-    }
+    description: "Sander Moolin's personal site. Work, blog, contact, and more."
 }
