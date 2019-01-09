@@ -1,7 +1,12 @@
 <template>
-
     <main>
-        <Layout/>
+        <Content/>
     </main>
-
 </template>
+
+<style lang="scss">
+.thing {
+    .another {
+    }
+}
+</style>

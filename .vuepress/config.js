@@ -1,4 +1,4 @@
 module.exports = {
-    title: 'Sander Moolin',
+    title: '',
     description: "Sander Moolin's personal site. Work, blog, contact, and more."
 }
