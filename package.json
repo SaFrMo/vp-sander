@@ -11,8 +11,13 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "@vuepress/plugin-register-components": "^1.0.0-alpha.0",
         "node-sass": "^4.11.0",
         "sass-loader": "^7.1.0",
         "vuepress": "^0.14.8"
+    },
+    "dependencies": {
+        "fh-components": "^1.4.15",
+        "vue-three-wrap": "^1.0.1"
     }
 }
