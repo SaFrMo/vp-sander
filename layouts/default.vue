@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <nuxt/>
-  </div>
+    <div>
+        <box-of-boxes/>
+
+        <nuxt/>
+    </div>
 </template>
 
 <style>

@@ -1,5 +1,18 @@
+// vars
 $red: tomato;
+$primary-color: #895fa8;
+$secondary-color: #f8ef3f;
+$white: #fff;
+$black: #2c2d2d;
 
+// base styling
+body {
+    margin: 0;
+    min-height: 100%;
+    color: $black;
+}
+
+// mixins
 @mixin fill($position: absolute) {
     position: $position;
     top: 0;

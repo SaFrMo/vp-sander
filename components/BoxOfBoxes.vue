@@ -12,38 +12,38 @@ const ref = {}
 export default {
     methods: {
         start({ scene, camera }) {
-            // camera.position.y = 5
             camera.position.z = 4
 
-            //This will add a starfield to the background of a scene
-            const starsGeometry = new THREE.Geometry()
+            // prep a holder for particles
+            const geo = new THREE.Geometry()
 
-            for (var i = 0; i < 10000; i++) {
-                var star = new THREE.Vector3()
-                star.x = THREE.Math.randFloatSpread(3)
-                star.y = THREE.Math.randFloatSpread(3)
-                star.z = THREE.Math.randFloatSpread(3)
+            for (let i = 0; i < 10000; i++) {
+                const point = new THREE.Vector3()
+                point.x = THREE.Math.randFloatSpread(3)
+                point.y = THREE.Math.randFloatSpread(3)
+                point.z = THREE.Math.randFloatSpread(3)
 
-                starsGeometry.vertices.push(star)
+                geo.vertices.push(point)
             }
 
-            const starsMaterial = new THREE.PointsMaterial({
-                color: 0xff0000,
+            const mat = new THREE.PointsMaterial({
+                color: 0x050505,
                 size: 0.2,
                 blending: THREE.AdditiveBlending,
                 transparent: true,
                 opacity: 0.35
             })
 
-            ref.starField = new THREE.Points(starsGeometry, starsMaterial)
+            ref.points = new THREE.Points(geo, mat)
 
-            scene.add(ref.starField)
-            // camera.lookAt(ref.starField.position)
+            scene.add(ref.points)
         },
         update() {
-            ref.starField.rotation.y -= 0.005
-            const h = (Math.sin(Date.now() * 0.0005) + 1) / 2
-            ref.starField.material.color.setHSL(h, 0.7, 0.1)
+            ref.points.rotation.y -= 0.005
+
+            // color wheel rotation
+            // const h = (Math.sin(Date.now() * 0.0005) + 1) / 2
+            // ref.points.material.color.setHSL(h, 0.4, 0.1)
         }
     }
 }
@@ -52,7 +52,13 @@ export default {
 <style lang="scss">
 .box-of-boxes {
     .three-view {
-        @include fill(fixed);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 20%;
+        margin: auto;
+        width: 300px;
+        height: 300px;
     }
 }
 </style>
