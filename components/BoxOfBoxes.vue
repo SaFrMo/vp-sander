@@ -1,5 +1,5 @@
 <template>
-    <div class="box-of-boxes">>
+    <div class="box-of-boxes">
         <vue-three-wrap :start="start" :update="update" />
     </div>
 </template>
@@ -51,6 +51,8 @@ export default {
 
 <style lang="scss">
 .box-of-boxes {
-    @include fill(fixed);
+    .three-view {
+        @include fill(fixed);
+    }
 }
 </style>

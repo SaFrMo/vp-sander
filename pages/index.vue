@@ -6,6 +6,13 @@
 </template>
 
 <script>
+import Vue from 'vue'
+
+export default {
+    mounted() {
+        Vue.component('vue-three-wrap', require('vue-three-wrap').default)
+    }
+}
 </script>
 
 <style lang="scss">

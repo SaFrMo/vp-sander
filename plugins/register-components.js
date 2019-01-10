@@ -11,3 +11,8 @@ _.forEach(components.keys(), fileName => {
         .split('.')[0]
     Vue.component(componentName, componentConfig.default || componentConfig)
 })
+
+// register vue-three-wrap
+import VueThreeWrap from 'vue-three-wrap'
+Vue.component('vue-three-wrap', VueThreeWrap)
+// import 'vue-three-wrap'
