@@ -1,13 +1,29 @@
 <template>
     <main class="home">
-        <h1 class="title">Sander Moolin</h1>
+        <!-- <button class="title-wrap" @click="expanded = !expanded"> -->
+            <h1 :class="['title', { expanded }]">Sander Moolin</h1>
+        <!-- </button> -->
+
+        <nav class="list">
+
+            <nuxt-link to="/programming">Programming</nuxt-link>,
+            <nuxt-link to="/games">games</nuxt-link>
+
+        </nav>
+
     </main>
 </template>
 
 <script>
 import Vue from 'vue'
 
-export default {}
+export default {
+    data() {
+        return {
+            expanded: false
+        }
+    }
+}
 </script>
 
 <style lang="scss">
@@ -20,6 +36,7 @@ export default {}
     flex-direction: column;
     justify-content: center;
 
+    // title
     .title {
         background: $black;
         display: inline-block;

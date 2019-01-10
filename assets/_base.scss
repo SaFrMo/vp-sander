@@ -1,16 +1,16 @@
+// animations
+@import './animations';
+
 // vars
 $red: tomato;
 $primary-color: #895fa8;
+$light-primary-color: lighten($primary-color, 30%);
 $secondary-color: #f8ef3f;
 $white: #fff;
 $black: #2c2d2d;
 
-// base styling
-body {
-    margin: 0;
-    min-height: 100%;
-    color: $black;
-}
+// bezier
+$bezier-1: cubic-bezier(0.54, 0.09, 0.11, 0.98);
 
 // mixins
 @mixin fill($position: absolute) {
@@ -19,4 +19,46 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
+}
+
+// base styling
+body {
+    margin: 0;
+    min-height: 100%;
+    color: $black;
+}
+a {
+    text-decoration: none;
+    color: $black;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 15px;
+        right: -5px;
+        bottom: -5px;
+        left: 2px;
+        background: $secondary-color;
+        z-index: -1;
+        transform-origin: center left;
+        transform: scale(0, 1);
+        transition: transform 0.4s;
+    }
+    &:nth-of-type(even)::before {
+        background: $light-primary-color;
+    }
+    &:hover::before,
+    &:focus::before {
+        transform: none;
+    }
+}
+button {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
 }
