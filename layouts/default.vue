@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="content-wrap" v-full-height.min>
         <box-of-boxes/>
 
         <nuxt/>
@@ -19,7 +19,13 @@ html {
     box-sizing: border-box;
 }
 
-*,
+.content-wrap {
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+}
+
+/* *,
 *:before,
 *:after {
     box-sizing: border-box;
@@ -53,5 +59,5 @@ html {
 .button--grey:hover {
     color: #fff;
     background-color: #35495e;
-}
+} */
 </style>

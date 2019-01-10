@@ -15,4 +15,16 @@ _.forEach(components.keys(), fileName => {
 // register vue-three-wrap
 import VueThreeWrap from 'vue-three-wrap'
 Vue.component('vue-three-wrap', VueThreeWrap)
-// import 'vue-three-wrap'
+
+// register directives
+const FullHeight = {
+    inserted(el, binding) {
+        const property = binding.modifiers.min ? 'min-height' : 'height'
+
+        el.style[property] = `${window.innerHeight}px`
+        window.addEventListener('resize', () => {
+            el.style[property] = `${window.innerHeight}px`
+        })
+    }
+}
+Vue.directive('full-height', FullHeight)

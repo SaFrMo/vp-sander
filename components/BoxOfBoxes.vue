@@ -54,8 +54,8 @@ export default {
     .three-view {
         position: fixed;
         top: 0;
-        bottom: 0;
         left: 20%;
+        bottom: 0;
         margin: auto;
         width: 300px;
         height: 300px;
