@@ -1,6 +1,7 @@
 <template>
     <main class="main">
         <h1>Sander Moolin</h1>
+        <box-of-boxes/>
     </main>
 </template>
 

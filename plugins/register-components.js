@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import _ from 'lodash'
 
+// register all components in @/components
 const components = require.context('@/components', false, /[A-Z]\w+\.(vue)$/)
 _.forEach(components.keys(), fileName => {
     const componentConfig = components(fileName)
