@@ -7,7 +7,8 @@
         <nav class="list">
 
             <nuxt-link to="/programming">Programming</nuxt-link>,
-            <nuxt-link to="/games">games</nuxt-link>
+            <nuxt-link to="/games">games</nuxt-link>,
+            <nuxt-link to="/blog">blog</nuxt-link>
 
         </nav>
 
