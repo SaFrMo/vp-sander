@@ -1,16 +1,26 @@
 {
-    "name": "vp-sander",
-    "version": "1.0.0",
+    "name": "",
+    "author": "Sander Moolin",
     "description": "",
+    "version": "1.0.0",
     "main": "index.js",
     "scripts": {
         "dev": "vuepress dev",
         "build": "vuepress build"
     },
     "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "vuepress": "^0.14.8"
+    "prettier": {
+        "tabWidth": 4,
+        "semi": false,
+        "singleQuote": true
+    },
+    "license": "MIT",
+    "dependencies": {
+        "auto-blur": "^1.1.1",
+        "case": "^1.5.5",
+        "fh-components": "^1.2.67",
+        "node-sass": "^4.9.0",
+        "sass-loader": "^7.0.3",
+        "vuepress": "^0.8.4"
     }
 }
