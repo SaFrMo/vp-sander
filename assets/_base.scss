@@ -43,7 +43,7 @@ a {
         z-index: -1;
         transform-origin: center left;
         transform: scale(0, 1);
-        transition: transform 0.4s;
+        // transition: transform 0.2s;
     }
     &:nth-of-type(even)::before {
         background: $light-primary-color;

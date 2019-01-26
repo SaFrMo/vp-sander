@@ -57,21 +57,21 @@ export default {
             scene.add(ref.points)
 
             // start camera animation
-            keyframes({
-                values: [
-                    { x: this.cameraX, y: this.cameraY, z: this.cameraZ },
-                    { x: 4, y: 0, z: 7 },
-                    { x: 1, y: 0, z: -10 }
-                ],
-                easings: [easing.easeOut, easing.easeIn],
-                duration: 3000,
-                loop: Infinity
-            }).start(({ x, y, z }) => {
-                this.cameraX = x
-                this.cameraY = y
-                this.cameraZ = z
-                this.updateCameraPosition()
-            })
+            // keyframes({
+            //     values: [
+            //         { x: this.cameraX, y: this.cameraY, z: this.cameraZ },
+            //         { x: 4, y: 0, z: 7 },
+            //         { x: 1, y: 0, z: -10 }
+            //     ],
+            //     easings: [easing.easeOut, easing.easeIn],
+            //     duration: 3000,
+            //     loop: Infinity
+            // }).start(({ x, y, z }) => {
+            //     this.cameraX = x
+            //     this.cameraY = y
+            //     this.cameraZ = z
+            //     this.updateCameraPosition()
+            // })
         },
         update() {
             ref.points.rotation.y -= 0.005
