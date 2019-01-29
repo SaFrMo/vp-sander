@@ -4,13 +4,25 @@
         <h1 id="main-menu-title">Sander Moolin</h1>
 
         <ul>
-            <li v-for="(page, i) in $site.pages" v-if="page.title != 'Home'">
+            <li v-for="(page, i) in cmpPages" v-if="page.title != 'Home'">
                 <router-link :to="page.path">{{ page.title }}</router-link>
             </li>
         </ul>
     </nav>
 
 </template>
+
+<script>
+
+export default {
+    computed: {
+        cmpPages(){
+            return this.$site.pages.filter(page => page.title.toLowerCase() != 'static')
+        }
+    }
+}
+
+</script>
 
 <style lang="scss">
 @import '.vuepress/styles/vars';
