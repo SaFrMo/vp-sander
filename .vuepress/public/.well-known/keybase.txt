@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/safrmo
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://sandermoolin.com
+  * I am safrmo (https://keybase.io/safrmo) on keybase.
+  * I have a public key ASDHFIqeYmEew9BL7xD0ysBoWHy2w25KLMQ3cXcTgu8YOwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01206ef963bec717d4ea7d25916b261f09721a9dd7d9e6daee20473bbd262ee97fbb0a",
+      "host": "keybase.io",
+      "kid": "0120c7148a9e62611ec3d04bef10f4cac068587cb6c36e4a2cc43771771382ef183b0a",
+      "uid": "d76c01a015495fccb7aee343356b4f19",
+      "username": "safrmo"
+    },
+    "merkle_root": {
+      "ctime": 1555515092,
+      "hash": "0b8a4e714ca7a6f68f068838399aa72861a21a889cc8f5a70857a309f092c492cc26016dfa47f70689d822e4565f24799274586076191f6975c60eeb4636ca39",
+      "hash_meta": "5a934fd45e9d76c441e2fae36b47c82d9c8b9a9b2c362576981b61377313d2e7",
+      "seqno": 5192010
+    },
+    "service": {
+      "entropy": "FFkvX7Uf1GZf+9Qw/M0v+qTF",
+      "hostname": "sandermoolin.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.2.2"
+  },
+  "ctime": 1555515104,
+  "expire_in": 504576000,
+  "prev": "29c4ce6dea2c94bc7ed9f56c61227a7655cc4d1837b8363ca1d1f00b809a10ba",
+  "seqno": 40,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgxxSKnmJhHsPQS+8Q9MrAaFh8tsNuSizEN3F3E4LvGDsKp3BheWxvYWTESpcCKMQgKcTObeoslLx+2fVsYSJ6dlXMTRg3uDY8odHwC4CaELrEIIzha6XtXo3a2m+3kPPKrsOcDFYkeNQpq+8XygzO3j0iAgHCo3NpZ8RAM8ZSDglUa/sAWgv7BhvgPOqxAaMrz5JKqaOBA9qakBU8Ul6lqxq2G2HJYnlf9a2iFr9npreF1I4YfESYSdWBDqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIAnsOSrxcFh1GcBo77Vj/mIzdpUSex+JHB7CZsP4MHI2o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/safrmo
+
+==================================================================
