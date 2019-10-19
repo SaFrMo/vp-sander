@@ -7,6 +7,12 @@
             <li v-for="(page, i) in cmpPages" v-if="page.title != 'Home'">
                 <router-link :to="page.path">{{ page.title }}</router-link>
             </li>
+            <li>
+                <a href="//gist.github.com/SaFrMo/29a6fbd90047233ec9bf124acba2044b">Sites</a>
+            </li>
+            <li>
+                <a href="//three-examples.netlify.com">3D Examples</a>
+            </li>
         </ul>
     </nav>
 
