@@ -13,7 +13,7 @@ export default {
     async mounted(canvas) {
         await this.$nextTick()
 
-        // await wait(3000)
+        await wait(3000)
 
         const width = this.$el.offsetWidth
         const height = this.$el.offsetHeight
