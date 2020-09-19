@@ -57,8 +57,14 @@ export default {
         margin: 0;
 
         display: grid;
-        grid-column-gap: 10px;
+        grid-gap: 10px;
         grid-auto-flow: column;
+
+        @media (max-width: 750px) {
+            grid-auto-flow: initial;
+            justify-content: flex-end;
+            text-align: right;
+        }
     }
 }
 

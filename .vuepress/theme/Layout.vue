@@ -69,10 +69,13 @@ body {
     font-weight: 500;
     opacity: 0;
 
-    &:hover,
-    &:focus {
-        box-shadow: 5px 5px var(--black);
-        background: var(--gray);
+    @media (min-width: 750px) {
+        &:hover,
+        &:focus {
+            box-shadow: 5px 5px black;
+            background: #ffe74c;
+            color: black;
+        }
     }
 
     &:active {

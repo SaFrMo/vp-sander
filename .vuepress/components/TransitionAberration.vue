@@ -2,13 +2,13 @@
     <transition :css="false" appear>
         <span class="aberration-wrapper">
             <span
-                :style="{ '--x': `${r.x}px`, '--y': `${r.y}px` }"
+                :style="{ '--x': `${r.x}vmin`, '--y': `${r.y}vmin` }"
                 class="r"
                 aria-hidden="true"
                 ><slot /></span
             ><span class="g"><slot /></span
             ><span
-                :style="{ '--x': `${b.x}px`, '--y': `${b.y}px` }"
+                :style="{ '--x': `${b.x}vmin`, '--y': `${b.y}vmin` }"
                 class="b"
                 aria-hidden="true"
                 ><slot
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-const rand = (range = 5) => {
+const rand = (range = 0.5) => {
     return Math.random() * range - range / 2
 }
 

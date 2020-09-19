@@ -163,7 +163,7 @@ export default {
     .content {
         font-family: 'Easley';
         font-size: 92px;
-        font-size: 10vmin;
+        font-size: 12vmin;
 
         &.clip {
             transform: translate(var(--x), var(--y));
