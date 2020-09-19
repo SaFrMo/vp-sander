@@ -2,7 +2,9 @@
     <section class="about" v-full-height>
         <div class="grid">
             <matter-wrap />
-            <Content />
+            <div class="content-wrap">
+                <Content />
+            </div>
         </div>
     </section>
 </template>
@@ -20,21 +22,27 @@ section.about {
     .grid {
         display: grid;
         grid-template-columns: 1fr 700px;
-        padding: 20px;
+        // padding: 20px 0 20px 20px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
     }
 
+    .content-wrap {
+        overflow-y: auto;
+    }
     .content {
         padding: 20px;
         // margin: 20px;
         // position: fixed;
-        top: 20px;
-        right: 20px;
-        bottom: 20px;
-        left: 20px;
         margin-left: auto;
         max-width: 700px;
-        background-color: #f1f1f1;
-        overflow-y: auto;
+        background-color: #fff;
+        margin: 20px;
+        // overflow-y: auto;
 
         @media (max-width: 700px) {
             max-width: 100%;
