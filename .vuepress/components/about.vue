@@ -41,7 +41,7 @@ section.about {
         }
         ul {
             padding-left: 20px;
-            
+
             @media (max-width: 700px) {
                 padding-left: 15px;
             }
