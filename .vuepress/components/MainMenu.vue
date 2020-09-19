@@ -1,33 +1,39 @@
 <template>
-
     <nav class="main-menu" aria-labelledby="main-menu-title">
-        <h1 id="main-menu-title">Sander Moolin</h1>
+        <!-- <h1 id="main-menu-title">Sander Moolin</h1> -->
 
         <ul>
             <li v-for="(page, i) in cmpPages" v-if="page.title != 'Home'">
-                <router-link :to="page.path">{{ page.title }}</router-link>
+                <router-link class="old-button" :to="page.path">{{
+                    page.title
+                }}</router-link>
             </li>
             <li>
-                <a href="//gist.github.com/SaFrMo/29a6fbd90047233ec9bf124acba2044b">Sites</a>
+                <a
+                    class="old-button"
+                    href="//gist.github.com/SaFrMo/29a6fbd90047233ec9bf124acba2044b"
+                    >Sites</a
+                >
             </li>
             <li>
-                <a href="//three-examples.netlify.com">3D Examples</a>
+                <a class="old-button" href="//three-examples.netlify.com"
+                    >3D Examples</a
+                >
             </li>
         </ul>
     </nav>
-
 </template>
 
 <script>
-
 export default {
     computed: {
-        cmpPages(){
-            return this.$site.pages.filter(page => page.title.toLowerCase() != 'static')
+        cmpPages() {
+            return this.$site.pages.filter(
+                page => page.title.toLowerCase() != 'static'
+            )
         }
     }
 }
-
 </script>
 
 <style lang="scss">
@@ -35,17 +41,11 @@ export default {
 
 .main-menu {
     font-size: 21px;
-    text-align: left;
-    display: inline-block;
-    width: 350px;
     margin-left: 0;
-    border: 4px solid #000;
-    padding: 0 30px;
-    background-color: #fff;
-
-    position: absolute;
-    right: $body-padding;
-    bottom: $body-padding;
+    font-weight: 500;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
 
     h1 {
         border-bottom: 2px solid $color2;
@@ -54,15 +54,26 @@ export default {
     ul {
         padding: 0;
         list-style-type: none;
+        margin: 0;
+
+        display: grid;
+        grid-gap: 10px;
+        grid-auto-flow: column;
+
+        @media (max-width: 750px) {
+            grid-auto-flow: initial;
+            justify-content: flex-end;
+            text-align: right;
+        }
     }
 }
 
 @media (max-width: 750px) {
-    .main-menu {
-        right: 10px;
-        bottom: 10px;
-        left: 10px;
-        width: initial;
-    }
+    // .main-menu {
+    //     right: 10px;
+    //     bottom: 10px;
+    //     left: 10px;
+    //     width: initial;
+    // }
 }
 </style>

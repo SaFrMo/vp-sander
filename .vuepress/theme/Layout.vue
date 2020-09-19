@@ -1,13 +1,9 @@
 <template>
-
     <main>
-
-        <transition name="fade">
-            <component :is="cmpComponent"/>
+        <transition name="fade" appear>
+            <component :is="cmpComponent" />
         </transition>
-
     </main>
-
 </template>
 
 <script>
@@ -42,6 +38,14 @@ export default {
 @import '.vuepress/styles/vars';
 @import '.vuepress/styles/animations';
 
+@font-face {
+    font-family: 'Easley';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/Easley-Regular.woff2) format('woff2'),
+        url(/fonts/Easley-Regular.woff2) format('woff2');
+}
+
 body {
     margin: 0;
 }
@@ -52,10 +56,44 @@ body {
     color: #2c3e50;
 }
 
+.old-button {
+    border: 2px solid black;
+    padding: 5px 8px;
+    box-shadow: 3px 3px black;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    display: block;
+    background: white;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0;
+
+    &:hover,
+    &:focus {
+        box-shadow: 5px 5px black;
+        background: #fff76c;
+        color: black;
+        @media (min-width: 750px) {
+        }
+    }
+
+    &:active {
+        transform: translate(3px, 3px);
+        box-shadow: 0 0 var(--black);
+        transition: transform 0.05s, box-shadow 0.05s;
+        outline: none;
+    }
+}
+
 a {
     text-decoration: none;
     color: $color1;
-    // transition: color 0.4s;
+    transition: color 0.2s;
+
+    svg.icon.outbound {
+        display: none;
+    }
 
     &:hover,
     &:focus {

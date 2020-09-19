@@ -1,0 +1,10 @@
+
+> @1.0.0 build /Users/sandermoolin/misc/vp-sander
+> vuepress build
+
+
+ WAIT  Extracting site metadata...
+[12:54:32 PM] Compiling Client
+[12:54:32 PM] Compiling Server
+[12:54:34 PM] Compiled Server in 2s
+[12:54:35 PM] Compiled Client in 3s
