@@ -20,7 +20,7 @@ section.about {
     background-color: $color1;
 
     @media (max-width: 700px) {
-        background: #fffceb;
+        background: #fff;
     }
 
     .grid {
