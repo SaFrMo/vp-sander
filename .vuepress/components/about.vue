@@ -19,6 +19,10 @@ $color5: rgba(250, 240, 202, 1);
 section.about {
     background-color: $color1;
 
+    @media (max-width: 700px) {
+        background: #fffceb;
+    }
+
     .grid {
         display: grid;
         grid-template-columns: 1fr minmax(auto, 700px);
@@ -55,6 +59,7 @@ section.about {
             right: 10px;
             bottom: 10px;
             left: 10px;
+            margin: 10px;
         }
 
         & > * {
