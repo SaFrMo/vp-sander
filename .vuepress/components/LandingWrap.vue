@@ -101,9 +101,9 @@ export default {
 
 <style lang="scss">
 .landing-wrap {
-    height: 100vh;
-    min-height: 700px;
-    padding: 50px;
+    height: 100%;
+    // min-height: 700px;
+    padding: 20px;
     box-sizing: border-box;
     display: grid;
     grid-template-rows: 1fr auto;
