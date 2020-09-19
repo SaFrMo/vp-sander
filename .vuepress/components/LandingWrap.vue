@@ -18,16 +18,14 @@
             <!-- Form toggles -->
 
             <button
-                class="button-reset form-toggle"
+                class="button-reset form-toggle old-button"
                 @click="
                     selectedFormIndex = i
                     lastReload = Date.now()
                 "
             >
-                {{ startCase(form) }} It
+                Animate!
             </button>
-
-            
         </div>
     </section>
 </template>
@@ -104,8 +102,10 @@ export default {
 
     .title {
         margin: 0;
-        position: relative;
+        position: fixed;
         z-index: 5;
+        top: 20px;
+        left: 20px;
 
         .salutation {
             overflow: hidden;
@@ -116,25 +116,15 @@ export default {
     }
 
     .buttons {
-        display: grid;
-        grid-row-gap: 20px;
-        position: relative;
+        // display: grid;
+        // grid-row-gap: 20px;
+        // position: relative;
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
 
-        .toggle-wrap,
-        .nav-wrap {
-            display: flex;
-
-            .button-animate {
-                opacity: 0;
-            }
-
-            li:not(:first-child) {
-                margin-left: 10px;
-            }
-            // button,
-            // a {
-            //     @include old-style-button;
-            // }
+        .form-toggle {
+            cursor: pointer;
         }
     }
 }
