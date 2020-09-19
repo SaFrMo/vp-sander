@@ -63,9 +63,9 @@ export default {
 
 <style lang="scss">
 .negative-shadow-transition {
-    color: var(--white);
-    filter: drop-shadow(var(--x) var(--y) 0 var(--black));
-    -webkit-text-stroke: 1px var(--black);
+    color: white;
+    filter: drop-shadow(var(--x) var(--y) 0 black);
+    -webkit-text-stroke: 1px black;
 
     transition: filter 0.1s ease-out;
 }

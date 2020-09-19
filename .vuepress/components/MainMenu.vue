@@ -63,11 +63,11 @@ export default {
 }
 
 @media (max-width: 750px) {
-    .main-menu {
-        right: 10px;
-        bottom: 10px;
-        left: 10px;
-        width: initial;
-    }
+    // .main-menu {
+    //     right: 10px;
+    //     bottom: 10px;
+    //     left: 10px;
+    //     width: initial;
+    // }
 }
 </style>

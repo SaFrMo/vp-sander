@@ -1,5 +1,5 @@
 <template>
-    <transition :css="false" appear>
+    <transition :css="false" name="fade" appear>
         <span class="aberration-wrapper">
             <span :style="{ '--y': `${top}px` }" class="top" aria-hidden="true"
                 ><slot /></span

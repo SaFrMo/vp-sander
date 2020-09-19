@@ -11,7 +11,11 @@
         </h1>
 
         <!-- Current Form -->
-        <component :is="`landing-form-${cmpForm}`" :key="lastReload" />
+        <!-- <component :is="`landing-form-${cmpForm}`" :key="lastReload" /> -->
+        <landing-form-animate
+            :transition-index="selectedFormIndex"
+            :key="selectedFormIndex"
+        />
 
         <!-- Buttons -->
         <div class="buttons">
@@ -19,10 +23,7 @@
 
             <button
                 class="button-reset form-toggle old-button"
-                @click="
-                    selectedFormIndex = i
-                    lastReload = Date.now()
-                "
+                @click="resetFormIndex"
             >
                 Animate!
             </button>
@@ -49,18 +50,26 @@ export default {
     },
     computed: {
         cmpForm() {
-            const output = this.forms[this.selectedFormIndex]
-            return output === '3d' ? '3-d' : output
+            return this.forms[this.selectedFormIndex]
         }
     },
     methods: {
         startCase,
+        resetFormIndex() {
+            const oldIndex = this.selectedFormIndex
+            const transitionPoolLength = 4
+            while (oldIndex === this.selectedFormIndex) {
+                this.selectedFormIndex = Math.floor(
+                    Math.random() * transitionPoolLength
+                )
+            }
+        },
         async animateButtons() {
             await wait(1000)
 
             // stylers
             const stylers = Array.from(
-                this.$el.querySelectorAll('.button-animate')
+                document.querySelectorAll('.old-button')
             ).map(styler)
 
             // tweens
@@ -70,12 +79,12 @@ export default {
                     from: startVal,
                     to: { opacity: 1, y: 0 },
                     duration: 800,
-                    ease: easing.backInOut
+                    ease: easing.cubicBezier(0.65, 0, 0.35, 1)
                 })
             })
 
             // stagger
-            stagger(tweens, 40).start(values => {
+            stagger(tweens, 80).start(values => {
                 values.forEach((v = startVal, i) => {
                     stylers[i].set(v)
                 })

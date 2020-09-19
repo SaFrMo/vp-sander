@@ -67,6 +67,7 @@ body {
     font-family: inherit;
     font-size: 16px;
     font-weight: 500;
+    opacity: 0;
 
     &:hover,
     &:focus {

@@ -1,14 +1,11 @@
 <template>
-    <div class="landing-form-animate">
-        <div
-            :class="['content', cmpTransition]"
-            @click="focusInput"
-            :style="cmpStyle"
-        >
+    <div class="landing-form-animate" :style="{ '--opacity': opacity }">
+        <div :class="['content', cmpTransition]" :style="cmpStyle">
             <template v-if="splitText">
                 <client-only>
-                    <span v-for="(char, i) in cmpText" :key="i">
+                    <span v-for="(char, i) in finalText" :key="i">
                         <component
+                            v-if="transitions && transitions.length > i"
                             :is="`transition-${transitions[i]}`"
                             :char="char"
                             @shake="shake"
@@ -24,7 +21,7 @@
 
             <template v-else-if="cmpTransition !== 'undefined'">
                 <component :is="`transition-${cmpTransition}`">
-                    {{ cmpText }}
+                    {{ finalText }}
                 </component>
             </template>
         </div>
@@ -36,6 +33,7 @@ import { sample } from 'lodash'
 import { tween, easing } from 'popmotion'
 
 export default {
+    props: { transitionIndex: { type: Number, default: 0 } },
     data() {
         return {
             // should match the names of all elements in `components/transition`
@@ -43,12 +41,13 @@ export default {
                 'clip',
                 'spring-up',
                 'aberration',
-                'negative-shadow',
+                'negative-shadow'
                 // 'path-text'
             ],
             transitions: [],
-            transitionIndex: 0,
+            opacity: 0,
             interval: null,
+            letterCount: 0,
 
             // shake
             shakeAmount: { x: 0, y: 0 },
@@ -60,6 +59,15 @@ export default {
     mounted() {
         this.mountEnter()
 
+        this.fadeInAnimation()
+        this.interval = setInterval(() => {
+            if (this.letterCount < this.cmpText.length) {
+                this.letterCount++
+            } else {
+                clearInterval(this.interval)
+            }
+        }, 100)
+
         this.shakeInterval = setInterval(() => {
             this.shakeAmount = {
                 x: Math.random() * 10,
@@ -70,6 +78,9 @@ export default {
     computed: {
         cmpText() {
             return 'Sander Moolin'
+        },
+        finalText() {
+            return this.cmpText.slice(0, this.letterCount + 1)
         },
         cmpTransition() {
             return this.transitions[this.transitionIndex]
@@ -85,8 +96,9 @@ export default {
         }
     },
     methods: {
-        focusInput() {
-            document.body.querySelector('.title .text-input').focus()
+        fadeInAnimation() {
+            this.opacity = 1
+            // tween({ duration: 4000 }).start(v => (this.opacity = v))
         },
         updateTransitions() {
             const length = this.cmpText.heroText.length
@@ -98,12 +110,9 @@ export default {
             }
         },
         mountEnter() {
-            let index = Math.floor(Math.random() * this.transitionPool.length)
-            // while (index === this.$store.state.transitionIndex) {
-            //     index = Math.floor(Math.random() * this.transitionPool.length)
-            // }
-
-            this.transitionIndex = index
+            // let index = Math.floor(Math.random() * this.transitionPool.length)
+            //
+            // this.transitionIndex = index
             const randomTransition = this.transitionPool[this.transitionIndex]
 
             const startText = 'Sander Moolin'
@@ -132,13 +141,13 @@ export default {
             })
         }
     },
-    watch: {
-        '$store.state.heroText'() {
-            this.updateTransitions()
-        }
-    },
     beforeDestroy() {
         clearInterval(this.interval)
+    },
+    watch: {
+        transitionIndex(n) {
+            this.fadeInAnimation()
+        }
     }
 }
 </script>
@@ -149,6 +158,7 @@ export default {
     height: min-content;
     margin: auto 0;
     text-align: left;
+    opacity: var(--opacity);
 
     .content {
         font-family: 'Easley';
