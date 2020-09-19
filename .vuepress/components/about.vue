@@ -1,6 +1,9 @@
 <template>
     <section class="about" v-full-height>
-        <Content />
+        <div class="grid">
+            <matter-wrap />
+            <Content />
+        </div>
     </section>
 </template>
 
@@ -14,13 +17,22 @@ $color5: rgba(250, 240, 202, 1);
 section.about {
     background-color: $color1;
 
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 700px;
+        padding: 20px;
+    }
+
     .content {
         padding: 20px;
-        position: fixed;
-        bottom: 20px;
+        // margin: 20px;
+        // position: fixed;
+        top: 20px;
         right: 20px;
-        max-height: 50vh;
-        max-width: 50%;
+        bottom: 20px;
+        left: 20px;
+        margin-left: auto;
+        max-width: 700px;
         background-color: #f1f1f1;
         overflow-y: auto;
 
