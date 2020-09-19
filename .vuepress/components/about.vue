@@ -25,8 +25,12 @@ section.about {
         overflow-y: auto;
 
         @media (max-width: 700px) {
-            left: 20px;
             max-width: 100%;
+            max-height: initial;
+            top: 10px;
+            right: 10px;
+            bottom: 10px;
+            left: 10px;
         }
 
         & > * {
@@ -36,6 +40,8 @@ section.about {
             text-decoration: underline;
         }
         ul {
+            padding-left: 20px;
+            
             @media (max-width: 700px) {
                 padding-left: 15px;
             }

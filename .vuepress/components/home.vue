@@ -34,6 +34,13 @@
         align-items: center;
         justify-content: center;
 
+        @media (max-width: 700px) {
+            transform: scale(0.7);
+            width: 70%;
+            height: 70%;
+            margin: auto;
+        }
+
         .planet {
             background-color: #6666cc;
             width: 200px;
