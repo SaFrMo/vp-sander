@@ -38,6 +38,14 @@ export default {
 @import '.vuepress/styles/vars';
 @import '.vuepress/styles/animations';
 
+@font-face {
+    font-family: 'Easley';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/Easley-Regular.woff2) format('woff2'),
+        url(/fonts/Easley-Regular.woff2) format('woff2');
+}
+
 body {
     margin: 0;
 }

@@ -97,7 +97,7 @@ export default {
     padding: 50px;
     box-sizing: border-box;
     display: grid;
-    grid-template-rows: min-content 1fr auto;
+    grid-template-rows: 1fr auto;
     color: black;
 
     .title {
