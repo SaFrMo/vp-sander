@@ -1,13 +1,13 @@
 import { Bodies, World } from 'matter-js'
 
-export default function (opts = {}) {
+export default function(opts = {}) {
     // set defaults
     opts = {
         padding: 20,
         world: null,
         canvas: null,
         fullscreen: true,
-        ...opts,
+        ...opts
     }
 
     // make sure we have a world
@@ -34,15 +34,15 @@ export default function (opts = {}) {
     // add walls
     const walls = [
         // top
-        Bodies.rectangle(
-            halfWidth,
-            fullscreen ? -halfPadding : padding,
-            width,
-            padding,
-            {
-                isStatic: true,
-            }
-        ),
+        // Bodies.rectangle(
+        //     halfWidth,
+        //     fullscreen ? -halfPadding : padding,
+        //     width,
+        //     padding,
+        //     {
+        //         isStatic: true,
+        //     }
+        // ),
         // right
         Bodies.rectangle(
             fullscreen ? width + halfPadding : width - halfPadding,
@@ -50,7 +50,7 @@ export default function (opts = {}) {
             padding,
             height,
             {
-                isStatic: true,
+                isStatic: true
             }
         ),
         // bottom
@@ -60,7 +60,7 @@ export default function (opts = {}) {
             width,
             padding,
             {
-                isStatic: true,
+                isStatic: true
             }
         ),
         // left
@@ -70,9 +70,9 @@ export default function (opts = {}) {
             padding,
             height,
             {
-                isStatic: true,
+                isStatic: true
             }
-        ),
+        )
     ]
     World.add(world, walls)
 

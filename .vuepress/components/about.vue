@@ -10,7 +10,7 @@
 </template>
 
 <style lang="scss">
-$color1: rgba(255, 231, 76, 1);
+$color1: #ffffef; //#fffceb; //rgba(255, 231, 76, 1);
 $color2: rgba(255, 89, 100, 1);
 $color3: rgba(89, 195, 195, 1);
 $color4: rgba(13, 59, 102, 1);

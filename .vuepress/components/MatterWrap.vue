@@ -13,6 +13,8 @@ export default {
     async mounted(canvas) {
         await this.$nextTick()
 
+        // await wait(3000)
+
         const width = this.$el.offsetWidth
         const height = this.$el.offsetHeight
 
@@ -23,7 +25,7 @@ export default {
                 options: {
                     width,
                     height,
-                    wireframe: false
+                    wireframes: false
                 }
             },
             clear: false
@@ -34,38 +36,43 @@ export default {
         for (let i = 0; i < 100; i++) {
             const dice = Math.random() * 2
             let body
+            const fillOptions = ['#327786', '#429EB3', '#97CCD8', '#225059'] //['#F15152', '#084C61', '#D1BECF']
+            const accents = ['#F7E08D', '#F29195', '#BEE5BF', '#A989A8']
+            const period = 7
+            const fillStyle =
+                i % period || i === 0
+                    ? fillOptions[
+                          Math.floor(fillOptions.length * Math.random())
+                      ]
+                    : accents[(i / period - 1) % accents.length]
             if (dice <= 1) {
                 body = Bodies.circle(
                     Math.random() * width,
-                    height * 0.2 * Math.random(),
+                    height * -0.2 * Math.random(),
                     Math.random() * 20 + 10,
                     {
-                        restitution: Math.random(),
+                        restitution: Math.random() * 0.6 + 0.4,
                         render: {
-                            fillStyle: 'red',
-                            strokeStyle: 'blue',
-                            lineWidth: 3
+                            fillStyle
                         }
                     }
                 )
             } else if (dice <= 2) {
                 body = Bodies.rectangle(
                     Math.random() * width,
-                    height * 0.2 * Math.random(),
+                    height * -0.2 * Math.random(),
                     Math.random() * 20 + 10,
                     Math.random() * 20 + 10,
                     {
-                        restitution: Math.random(),
+                        restitution: Math.random() * 0.6 + 0.4,
                         render: {
-                            fillStyle: 'red',
-                            strokeStyle: 'blue',
-                            lineWidth: 3
+                            fillStyle
                         }
                     }
                 )
             }
             this.matterAdd(body)
-            await wait(Math.random() * 2000)
+            await wait(Math.random() * 800)
         }
     }
 }
