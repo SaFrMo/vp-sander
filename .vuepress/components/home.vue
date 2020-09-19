@@ -1,17 +1,6 @@
 <template>
     <main class="front-page">
-        <section
-            class="planet-earth"
-            aria-label="Graphic showing a blue circle being orbited by a gray circle, meant to evoke the moon orbiting the Earth. The words 'space station' orbit the gray circle."
-        >
-            <div class="planet earth">
-                <div class="planet moon">
-                    <p class="space-station" aria-hidden="true">
-                        space station
-                    </p>
-                </div>
-            </div>
-        </section>
+        <landing-wrap/>
 
         <main-menu />
     </main>
@@ -62,6 +51,12 @@
             text-align: center;
             position: relative;
             top: 80px;
+            font-size: 30px;
+            // transform: scaleY(-1);
+            // width: 30px;
+            // height: 30px;
+            // background: tomato;
+            // border-radius: 50%;
         }
     }
 }

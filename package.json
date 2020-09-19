@@ -20,6 +20,7 @@
         "case": "^1.5.5",
         "fh-components": "^1.2.67",
         "node-sass": "4.14.1",
+        "popmotion": "8.7.5",
         "sass-loader": "^7.0.3",
         "vue": "2.6.12",
         "vue-template-compiler": "2.6.12",
