@@ -1,13 +1,9 @@
 <template>
-
     <main>
-
-        <transition name="fade">
-            <component :is="cmpComponent"/>
+        <transition name="fade" appear>
+            <component :is="cmpComponent" />
         </transition>
-
     </main>
-
 </template>
 
 <script>
@@ -55,7 +51,11 @@ body {
 a {
     text-decoration: none;
     color: $color1;
-    // transition: color 0.4s;
+    transition: color 0.2s;
+    
+    svg.icon.outbound {
+        display: none;
+    }
 
     &:hover,
     &:focus {

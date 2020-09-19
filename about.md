@@ -4,19 +4,21 @@ title: About
 
 # Hi! My name is Sander Moolin.
 
-I'm a web and game developer focused on Vue, WordPress, SVG, and accessibility.
+I'm a web and game developer at [Fuzzco](https://fuzzco.com/) focused on Vue, SVG, WebGL, and accessibility.
 
 I've worked on:
 
-*   [Vuehaus](https://github.com/funkhaus/vuehaus), a template to build Vue sites in WordPress
-*   [Several sites for Funkhaus](https://gist.github.com/SaFrMo/29a6fbd90047233ec9bf124acba2044b), a web design firm based in LA
-*   [Several NPM packages](https://gist.github.com/SaFrMo/d13f47de90ff0a8bc1d4ee3621a1a7b6), with a focus on zero-dependency libraries
+-   [Fuzznuxt](https://github.com/fuzzco/fuzznuxt), a Prismic/Nuxt static site boilerplate
+-   [vue-three-wrap](https://github.com/SaFrMo/vue-three-wrap), a wrapper component to simplify creating [three.js](https://threejs.org/) scenes
+-   [Several sites for Fuzzco and Funkhaus](https://gist.github.com/SaFrMo/29a6fbd90047233ec9bf124acba2044b), including:
+    -   [Pretend Foundry Font Builder](https://pretendfoundry.com/font-builder): Make-your-own font game that converts canvas drawings to .ttf downloads
+    -   [Imagine Entertainment](https://imagine-entertainment.com/): New site from the ground up for the high-profile film studio
+    -   [Elizabeth Taylor](https://elizabethtaylor.com/biography): Interactive timeline of the star's life
+    -   [Synack](https://www.synack.com/): Three.js scene with custom shaders and an SVG-based game
+    -   [Primer](https://www.primer.com/): Custom canvas/SVG fluid graphics throughout site and a 3D tile viewer
+    
 
-I'm also very interested in game development and decentralized apps/browsing. I've worked on:
-
-*   [Fritter](https://github.com/beakerbrowser/fritter), a decentralized Twitter clone
-*   [A reusable library](https://github.com/SaFrMo/phaser-component-library) of [Phaser](https://phaser.io) components
-*   [My game portfolio](https://safrmo.itch.io/) at itch.io
+Some of my
 
 I'm [non-binary](https://transequality.org/issues/resources/understanding-non-binary-people-how-to-be-respectful-and-supportive), so I use they/them pronouns. I also believe very strongly in the [Ethical Design pyramid](https://2017.ind.ie/ethical-design/).
 

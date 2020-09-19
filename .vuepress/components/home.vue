@@ -1,21 +1,20 @@
 <template>
-
     <main class="front-page">
-
-        <section class="planet-earth" aria-label="Graphic showing a blue circle being orbited by a gray circle, meant to evoke the moon orbiting the Earth. The words 'space station' orbit the gray circle.">
-
+        <section
+            class="planet-earth"
+            aria-label="Graphic showing a blue circle being orbited by a gray circle, meant to evoke the moon orbiting the Earth. The words 'space station' orbit the gray circle."
+        >
             <div class="planet earth">
                 <div class="planet moon">
-                    <p class="space-station" aria-hidden="true">space station</p>
+                    <p class="space-station" aria-hidden="true">
+                        space station
+                    </p>
                 </div>
             </div>
-
         </section>
 
-        <main-menu/>
-
+        <main-menu />
     </main>
-
 </template>
 
 <style lang="scss">

@@ -1,11 +1,7 @@
 <template>
-
     <section class="about" v-full-height>
-
-        <Content/>
-
+        <Content />
     </section>
-
 </template>
 
 <style lang="scss">
@@ -28,11 +24,21 @@ section.about {
         background-color: #f1f1f1;
         overflow-y: auto;
 
+        @media (max-width: 700px) {
+            left: 20px;
+            max-width: 100%;
+        }
+
         & > * {
             max-width: 700px;
         }
         a {
             text-decoration: underline;
+        }
+        ul {
+            @media (max-width: 700px) {
+                padding-left: 15px;
+            }
         }
     }
 }
