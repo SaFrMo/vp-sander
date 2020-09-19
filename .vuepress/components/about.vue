@@ -21,7 +21,7 @@ section.about {
 
     .grid {
         display: grid;
-        grid-template-columns: 1fr 700px;
+        grid-template-columns: 1fr minmax(auto, 700px);
         // padding: 20px 0 20px 20px;
         box-sizing: border-box;
         position: absolute;
@@ -29,20 +29,24 @@ section.about {
         right: 0;
         bottom: 0;
         left: 0;
-    }
 
+        @media (max-width: 700px) {
+            grid-template-columns: 100%;
+        }
+    }
+    .matter-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
     .content-wrap {
         overflow-y: auto;
     }
     .content {
         padding: 20px;
-        // margin: 20px;
-        // position: fixed;
-        margin-left: auto;
         max-width: 700px;
         background-color: #fff;
-        margin: 20px;
-        // overflow-y: auto;
+        margin: 20px 20px 20px 0;
 
         @media (max-width: 700px) {
             max-width: 100%;
@@ -72,6 +76,9 @@ section.about {
 // mobile
 @media (max-width: 750px) {
     section.about {
+        .matter-wrap {
+            display: none;
+        }
         .entry {
             -webkit-overflow-scrolling: touch;
             max-width: calc(100% - 80px);

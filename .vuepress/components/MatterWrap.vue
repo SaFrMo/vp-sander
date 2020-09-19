@@ -40,7 +40,7 @@ export default {
                     height * 0.2 * Math.random(),
                     Math.random() * 20 + 10,
                     {
-                        restitution: Math.random() + 0.3,
+                        restitution: Math.random(),
                         render: {
                             fillStyle: 'red',
                             strokeStyle: 'blue',
@@ -55,7 +55,7 @@ export default {
                     Math.random() * 20 + 10,
                     Math.random() * 20 + 10,
                     {
-                        restitution: Math.random() + 0.3,
+                        restitution: Math.random(),
                         render: {
                             fillStyle: 'red',
                             strokeStyle: 'blue',

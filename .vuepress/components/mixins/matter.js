@@ -11,11 +11,11 @@ import matterDom from './parts/matterDom'
 export default {
     data() {
         return {
-            matter: {},
+            matter: {}
         }
     },
     mounted() {
-        window.addEventListener('resize', debounce(this.onResize, 150))
+        // window.addEventListener('resize', debounce(this.onResize, 150))
     },
     computed: {
         width() {
@@ -23,7 +23,7 @@ export default {
         },
         height() {
             return get(this.matter.render, 'canvas.height', -1)
-        },
+        }
     },
     methods: {
         onResize() {
@@ -33,6 +33,6 @@ export default {
         matterWalls,
         matterAdd,
         matterMouse,
-        matterDom,
-    },
+        matterDom
+    }
 }
